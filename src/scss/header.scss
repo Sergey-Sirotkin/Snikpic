@@ -1,0 +1,248 @@
+//Header====================================================================================================
+
+.header {
+	position: absolute;
+	width: 100%;
+	z-index: 15;
+	background-color: #fff;
+	@include adaptiveValue("padding-top", 30, 15);
+	@include adaptiveValue("padding-bottom", 30, 15);
+
+	&._header-scroll {
+		position: fixed;
+		top: -200%;
+		box-shadow: 0 rem(1) rem(5) rgb(165, 165, 165);
+		padding-top: rem(15);
+		padding-bottom: rem(15);
+	}
+
+	&._header-show {
+		transition: top 0.5s ease 0s;
+		top: 0;
+	}
+
+	// .header__container
+
+	&__container {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	// .header__logo
+
+	&__logo {
+		display: inline-flex;
+		align-items: center;
+		flex: 0 0 rem(132);
+		height: rem(32);
+		z-index: 6;
+	}
+
+	// .header__logo-image
+
+	&__logo-image {
+		fill: $pinkColor;
+		width: 100%;
+		height: 100%;
+		transition: fill 0.3s ease 0s;
+
+		&:hover {
+			fill: $darkPinkColor;
+		}
+	}
+
+	// .header__control
+
+	&__control {
+		display: flex;
+		align-items: center;
+		gap: rem(16);
+	}
+
+	// .header__button
+
+	&__button {
+		//display: inline-flex;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		color: $darkPinkColor;
+		padding: rem(12) rem(24);
+		border-radius: rem(50);
+		background-color: #FFF0EC;
+		font-size: rem(16);
+		line-height: 160%;
+		font-weight: 500;
+		transition: all 0.3s ease 0s;
+		min-width: rem(109);
+		z-index: 5;
+
+		@media (any-hover: hover) {
+			&:hover {
+				background-color: $pinkColor;
+				color: #fff;
+			}
+		}
+
+		@media (max-width:$mobile) {
+			padding: rem(8) rem(12);
+		}
+
+		@media (max-width:$mobileSmall) {
+			background-color: #fff;
+			margin-top: rem(15);
+		}
+	}
+
+	// .header__select
+
+	&__select {
+		z-index: 5;
+	}
+}
+
+.menu {
+
+	// .menu__body
+
+	&__body {
+
+		@media (max-width:$mobile) {
+			display: flex;
+			position: fixed;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: -100%;
+			background-color: #FFF0EC;
+			justify-content: center;
+			overflow: auto;
+			transition: all 0.3s ease 0s;
+			padding: rem(100) 0 rem(15) 0;
+			z-index: 5;
+
+			.menu-open & {
+				left: 0;
+			}
+
+			&::before {
+				content: '';
+				position: fixed;
+				top: 0;
+				left: -100%;
+				background-color: #fff;
+				width: 100%;
+				@include adaptiveValue("height", 95, 62, 767.98, 320, 1);
+				transition: all 0.3s ease 0s;
+
+				.menu-open & {
+					left: 0;
+				}
+
+				._header-scroll & {
+					height: rem(62);
+				}
+			}
+		}
+	}
+
+	// .menu__list
+
+	&__list {
+		display: flex;
+		align-items: center;
+		column-gap: rem(40);
+		row-gap: rem(10);
+		flex-wrap: wrap;
+		padding: 0 rem(40);
+		justify-content: center;
+
+		@media (max-width:$mobile) {
+			text-align: center;
+			justify-content: flex-start;
+			flex-direction: column;
+			flex-wrap: nowrap;
+			row-gap: rem(35);
+			padding: rem(40) rem(40);
+		}
+	}
+
+	// .menu__link
+
+	&__link {
+		font-size: rem(14);
+		line-height: 160%;
+		transition: color 0.3s ease 0s;
+
+		@media (any-hover: hover) {
+			&:hover {
+				color: $darkPinkColor;
+			}
+		}
+
+		@media (max-width:$mobile) {
+			font-weight: 500;
+			font-size: rem(24);
+			color: $darkPinkColor;
+		}
+	}
+}
+
+//Burger====================================================================================================
+
+.icon-menu {
+	display: none;
+
+	@media (max-width: $mobile) {
+		display: block;
+		position: relative;
+		width: rem(30);
+		height: rem(18);
+		cursor: pointer;
+		z-index: 5;
+
+		span,
+		&::before,
+		&::after {
+			content: "";
+			transition: all 0.3s ease 0s;
+			right: 0;
+			position: absolute;
+			width: 100%;
+			height: rem(2);
+			background-color: #000;
+		}
+
+		&::before {
+			top: 0;
+		}
+
+		&::after {
+			bottom: 0;
+		}
+
+		span {
+			top: calc(50% - rem(1));
+		}
+
+		.menu-open & {
+			span {
+				width: 0;
+			}
+
+			&::before,
+			&::after {}
+
+			&::before {
+				top: calc(50% - rem(1));
+				transform: rotate(-45deg);
+			}
+
+			&::after {
+				bottom: calc(50% - rem(1));
+				transform: rotate(45deg);
+			}
+		}
+	}
+}

@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/_head.htm',{
+"title":"Snikpic"
+})
+
+<body>
+	<div class="wrapper">
+		@@include('html/_header.htm',{})
+		<main class="page">
+			<section class="product">
+				<div class="product__container">
+					<div class="product__body">
+						<h1 class="product__title">your agency.<span>in a box.</span></h1>
+						<p class="product__text subtitle-text">All of your work in one place. And much more</p>
+						<form class="product-form" action="#">
+							<input required type="email" name="form[]" placeholder="Enter your email address"
+								class="product-form__input">
+							<div class="product-form__body">
+								<button class="product-form__button btn">Sign up</button>
+								<p class="product-form__text">AND BE PART OF THE CLOSED BETA</p>
+							</div>
+						</form>
+						<div class="product-reviews">
+							<div class="product-reviews__image">
+								<img src="@img/product/stars.png" alt="stars">
+							</div>
+							<p class="product-reviews__text">Based on 100+ marketers reviews on</p>
+						</div>
+						<div class="product-brands">
+							<div class="product-brands__item">
+								<img src="@img/product/01.png" alt="brand">
+							</div>
+							<div class="product-brands__item">
+								<img src="@img/product/02.png" alt="brand">
+							</div>
+						</div>
+					</div>
+					<div data-gallery class="product__image">
+						<a class="product__link" href="@img/product/product-image.png">
+							<img src="@img/product/product-image.png" alt="Snikpic app">
+						</a>
+					</div>
+				</div>
+			</section>
+			<section class="learn">
+				<div class="learn__container">
+					<div data-tabs data-tabs-animate="400" class="learn-tabs">
+						<nav data-tabs-titles class="learn-tabs__navigation">
+							<button type="button" class="learn-tabs__title _tab-active">create</button>
+							<button type="button" class="learn-tabs__title">manage</button>
+							<button type="button" class="learn-tabs__title">automate</button>
+							<button type="button" class="learn-tabs__title">chat</button>
+							<button type="button" class="learn-tabs__title">delegate</button>
+						</nav>
+						<div data-tabs-body class="learn-tabs__content">
+							<div class="learn-tabs__body">
+								<div class="learn-tabs__inner">
+									<div class="learn-tabs-info">
+										<h2 class="learn-tabs-info__title title">all your creative tasks
+											<span>simplified with AI.</span>
+										</h2>
+										<p class="learn-tabs-info__text subtitle-text">Get content ideas, generate
+											captions that respects brand’s tone of voice, design and plan your
+											publications all in one place</p>
+										<p class="learn-tabs-info__subtitle">REPLACES</p>
+										<div class="learn-tabs-info__brands">
+											<p class="learn-tabs-info__brand">Feedly</p>
+											<p class="learn-tabs-info__brand">Canva</p>
+											<p class="learn-tabs-info__brand">Copy.ai</p>
+											<p class="learn-tabs-info__brand">Hootsuite</p>
+										</div>
+										<button data-goto=".contact__container" class="learn-tabs-info__button btn">Sign
+											up</button>
+									</div>
+									<div data-gallery class="learn-tabs-image">
+										<a class="learn-tabs-image__link" href="@img/tabs/01.png">
+											<img src="@img/tabs/01.png"
+												alt="All your creative tasks simplified with AI">
+										</a>
+									</div>
+								</div>
+							</div>
+							<div class="learn-tabs__body">
+								<div class="learn-tabs__inner">
+									<div class="learn-tabs-info">
+										<h2 class="learn-tabs-info__title title">transparency over all the <span>work
+												ahead of you.</span></h2>
+										<p class="learn-tabs-info__text subtitle-text">Plan, track, and manage all your
+											work with project management that flexes to your team's needs.</p>
+										<p class="learn-tabs-info__subtitle">REPLACES</p>
+										<div class="learn-tabs-info__brands">
+											<p class="learn-tabs-info__brand">Asana</p>
+											<p class="learn-tabs-info__brand">Monday</p>
+										</div>
+										<button data-goto=".contact__container" class="learn-tabs-info__button btn">Sign
+											up</button>
+									</div>
+									<div data-gallery class="learn-tabs-image">
+										<a class="learn-tabs-image__link" href="@img/tabs/02.png">
+											<img src="@img/tabs/02.png"
+												alt="Transparency over all the work ahead of you">
+										</a>
+									</div>
+								</div>
+							</div>
+							<div class="learn-tabs__body">
+								<div class="learn-tabs__inner">
+									<div class="learn-tabs-info">
+										<h2 class="learn-tabs-info__title title">your entire workflow <span>on
+												autopilot.</span></h2>
+										<p class="learn-tabs-info__text subtitle-text">Eliminate the busywork and focus
+											on what matters with hundreds of Automations. Automatically assign tasks,
+											post comments, update statuses, and sync with other tools.</p>
+										<p class="learn-tabs-info__subtitle">REPLACES</p>
+										<div class="learn-tabs-info__brands">
+											<p class="learn-tabs-info__brand">UiPath</p>
+											<p class="learn-tabs-info__brand">Zapier</p>
+											<p class="learn-tabs-info__brand">Airtable</p>
+										</div>
+										<button data-goto=".contact__container" class="learn-tabs-info__button btn">Sign
+											up</button>
+									</div>
+									<div data-gallery class="learn-tabs-image">
+										<a class="learn-tabs-image__link" href="@img/tabs/03.png">
+											<img src="@img/tabs/03.png" alt="Your entire workflow on autopilot">
+										</a>
+									</div>
+								</div>
+							</div>
+							<div class="learn-tabs__body">
+								<div class="learn-tabs__inner">
+									<div class="learn-tabs-info">
+										<h2 class="learn-tabs-info__title title">one single chat <span>to rule them all.
+											</span></h2>
+										<p class="learn-tabs-info__text subtitle-text">Work smarter as a team with
+											real-time chat. All your client-facing conversations are automatically
+											bridged to Whatsapp</p>
+										<p class="learn-tabs-info__subtitle">REPLACES</p>
+										<div class="learn-tabs-info__brands">
+											<p class="learn-tabs-info__brand">Slack</p>
+											<p class="learn-tabs-info__brand">MS Teams</p>
+											<p class="learn-tabs-info__brand">Whatsapp</p>
+										</div>
+										<button data-goto=".contact__container" class="learn-tabs-info__button btn">Sign
+											up</button>
+									</div>
+									<div data-gallery class="learn-tabs-image">
+										<a class="learn-tabs-image__link" href="@img/tabs/04.png">
+											<img src="@img/tabs/04.png" alt="One single chat to rule them all">
+										</a>
+									</div>
+								</div>
+							</div>
+							<div class="learn-tabs__body">
+								<div class="learn-tabs__inner">
+									<div class="learn-tabs-info">
+										<h2 class="learn-tabs-info__title title">find the right teammates to <span>get
+												things done.</span></h2>
+										<p class="learn-tabs-info__text subtitle-text">Access the largest network of
+											marketing professional to delegate your tasks and automatically orchestrate
+											payment across teams and clients</p>
+										<p class="learn-tabs-info__subtitle">REPLACES</p>
+										<div class="learn-tabs-info__brands">
+											<p class="learn-tabs-info__brand">Upwork</p>
+											<p class="learn-tabs-info__brand">Malt</p>
+											<p class="learn-tabs-info__brand">Fiverr</p>
+										</div>
+										<button data-goto=".contact__container" class="learn-tabs-info__button btn">Sign
+											up</button>
+									</div>
+									<div data-gallery class="learn-tabs-image">
+										<a class="learn-tabs-image__link" href="@img/tabs/05.png">
+											<img src="@img/tabs/05.png"
+												alt="Find the right teammates to get things done">
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="benefits">
+				<div class="benefits__container">
+					<div class="benefits__slogan">
+						<h2 class="benefits__title title">stop <span>selling yourself.</span></h2>
+						<p class="benefits__subtitle subtitle-text">There is more in life than prospection. Just focus
+							on your craft and let us take care of the rest</p>
+					</div>
+					<div class="benefits__body">
+						<div class="benefits__row">
+							<div class="benefits__row-icon">
+								<img src="@img/icons/arrow.svg" alt="arrow">
+							</div>
+							<p class="benefits__row-title">dedicated landing page</p>
+							<p class="benefits__row-text">When onboarding on snikpic, you will have your own dedicated
+								and shareable landing page optimized for conversion.</p>
+						</div>
+						<div class="benefits__row">
+							<div class="benefits__row-icon">
+								<img src="@img/icons/phone.svg" alt="arrow">
+							</div>
+							<p class="benefits__row-title">purchasable prospect</p>
+							<p class="benefits__row-text">Use snikpic’s experience running ads and only buy from us
+								prospect who have shown direct interest in your profile. We take care of the rest</p>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="pricing">
+				<div class="pricing__container">
+					<div class="pricing__body">
+						<h2 class="pricing__title title">one simple <span>pricing.</span></h2>
+						<div class="pricing__items">
+							<div data-tippy-content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, nostrum. Fugiat pariatur explicabo obcaecati mollitia!"
+								class="pricing__item pricing__item_pink">Unlimited features</div>
+							<div data-tippy-content="Fugiat pariatur explicabo obcaecati mollitia!"
+								class="pricing__item pricing__item_yellow">Unlimited members</div>
+							<div data-tippy-content="Earum, nostrum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat pariatur explicabo obcaecati mollitia!"
+								class="pricing__item pricing__item_green">Unlimited workflows</div>
+							<div data-tippy-content="Lorem ipsum dolor. Earum, nostrum. Fugiat pariatur explicabo obcaecati mollitia!"
+								class="pricing__item pricing__item_blue">Unlimited calendars</div>
+							<div data-tippy-content="Earum, nostrum. Fugiat pariatur explicabo obcaecati mollitia!"
+								class="pricing__item pricing__item_purple">Unlimited meeting</div>
+						</div>
+						<button data-goto=".contact__container" class="pricing__button btn">Sign up</button>
+					</div>
+					<div class="pricing__price">
+						<div class="pricing__price-image">
+							<img src="@img/pricing-bg.png" alt="bg">
+						</div>
+						<div class="pricing__price-body">
+							<p class="pricing__price-title">49€</p>
+							<p class="pricing__price-subtitle">/ client / month</p>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="reviews">
+				<div class="reviews__container">
+					<div class="reviews__slider swiper">
+						<div class="reviews__wrapper swiper-wrapper">
+							<div class="reviews__slide swiper-slide">
+								<div class="swiper-slide-avatar">
+									<div class="swiper-slide-avatar__image">
+										<img src="@img/reviews/avatar.png" alt="avatar">
+									</div>
+									<a href="" class="swiper-slide-avatar__icon">
+										<svg class="swiper-slide-avatar__icon-img" width="100" height="100"
+											viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+											<g filter="url(#filter0_b_4_1776)">
+												<circle cx="50" cy="50" r="50" fill="white" fill-opacity="0.24" />
+											</g>
+											<circle cx="50" cy="50" r="40" />
+											<path
+												d="M65 48.7679C66.3333 49.5378 66.3333 51.4622 65 52.232L44.75 63.9234C43.4167 64.6932 41.75 63.7309 41.75 62.1913L41.75 38.8087C41.75 37.2691 43.4167 36.3068 44.75 37.0766L65 48.7679Z"
+												fill="white" />
+											<defs>
+												<filter id="filter0_b_4_1776" x="-15" y="-15" width="130" height="130"
+													filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+													<feFlood flood-opacity="0" result="BackgroundImageFix" />
+													<feGaussianBlur in="BackgroundImage" stdDeviation="7.5" />
+													<feComposite in2="SourceAlpha" operator="in"
+														result="effect1_backgroundBlur_4_1776" />
+													<feBlend mode="normal" in="SourceGraphic"
+														in2="effect1_backgroundBlur_4_1776" result="shape" />
+												</filter>
+											</defs>
+										</svg>
+									</a>
+								</div>
+								<div class="swiper-slide-body">
+									<h4 class="swiper-slide-body__title">Christophe Bourand, ChrisWebMarketing</h4>
+									<p class="swiper-slide-body__text">Juggling with all my clients and making sure
+										everything was done correctly took me a lot of energy. Not did Snikpic enabled
+										me to tremendously release that extra useless work, but I quickly found myself
+										able to take on much more clients than I originally could</p>
+									<div class="swiper-slide-body__image">
+										<img src="@img/reviews/reviews-img.png" alt="img">
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- Если нужна навигация (влево/вправо) -->
+						<div class="reviews__buttons">
+							<button type="button" class="swiper-button-prev">
+								<svg class="swiper-button-img" width="50" height="51" viewBox="0 0 50 51" fill="none"
+									xmlns="http://www.w3.org/2000/svg">
+									<circle cx="25" cy="25.002" r="24" transform="rotate(-180 25 25.002)"
+										stroke="#B8BCC1" stroke-width="2" />
+									<line x1="32" y1="25.002" x2="18" y2="25.002" stroke="#B8BCC1" stroke-width="2"
+										stroke-linecap="round" />
+									<line x1="20.5858" y1="29.002" x2="17" y2="25.4162" stroke="#B8BCC1"
+										stroke-width="2" stroke-linecap="round" />
+									<line x1="21" y1="21.4162" x2="17.4142" y2="25.002" stroke="#B8BCC1"
+										stroke-width="2" stroke-linecap="round" />
+								</svg>
+							</button>
+							<button type="button" class="swiper-button-next">
+								<svg class="swiper-button-img" width="50" height="51" viewBox="0 0 50 51" fill="none"
+									xmlns="http://www.w3.org/2000/svg">
+									<circle cx="25" cy="25.002" r="24" transform="rotate(-180 25 25.002)"
+										stroke="#B8BCC1" stroke-width="2" />
+									<line x1="32" y1="25.002" x2="18" y2="25.002" stroke="#B8BCC1" stroke-width="2"
+										stroke-linecap="round" />
+									<line x1="20.5858" y1="29.002" x2="17" y2="25.4162" stroke="#B8BCC1"
+										stroke-width="2" stroke-linecap="round" />
+									<line x1="21" y1="21.4162" x2="17.4142" y2="25.002" stroke="#B8BCC1"
+										stroke-width="2" stroke-linecap="round" />
+								</svg>
+							</button>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+		@@include('html/_footer.htm',{})
+	</div>
+	@@include('html/_js.htm',{})
+</body>
+
+</html>

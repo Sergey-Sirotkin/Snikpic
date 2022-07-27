@@ -1,0 +1,220 @@
+//Contact====================================================================================================
+
+.contact {
+    position: absolute;
+    z-index: 2;
+    @include adaptiveValue("bottom", 400, 320, 1160, 767.98, 1);
+    left: 50%;
+    transform: translateX(-50%);
+    @include adaptiveValue("width", 1160, 320);
+    padding: 0 rem(15);
+
+    @media (max-width:$mobile) {
+        @include adaptiveValue("bottom", 320, 305, 767.98, 479.98, 1);
+    }
+
+    @media (max-width:$mobileSmall) {
+        @include adaptiveValue("bottom", 450, 430, 479.98, 320, 1);
+    }
+
+    // .contact__container
+
+    &__container {
+        @include adaptiveValue("padding-top", 120, 20);
+        @include adaptiveValue("padding-bottom", 120, 20);
+        @include adaptiveValue("padding-left", 48, 20);
+        @include adaptiveValue("padding-right", 48, 20);
+        box-shadow: 0 rem(-10) rem(150) rgba(80, 88, 100, 0.05);
+        border-radius: rem(20);
+        background-color: #fff;
+    }
+
+    // .contact__title
+
+    &__title {
+        @include adaptiveValue("margin-bottom", 74, 15);
+        text-align: center;
+    }
+
+    // .contact__button
+
+    &__button {
+        display: flex;
+        width: 100%;
+        margin: 0 auto;
+    }
+}
+
+.contact-form {
+
+    // .contact-form__body
+
+    &__body {
+        @include adaptiveValue("margin-bottom", 48, 24);
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: rem(32);
+        row-gap: rem(40);
+
+        @media (max-width:$mobile) {
+            grid-template-columns: 1fr;
+            row-gap: rem(10);
+        }
+    }
+
+
+    // .contact-form__item
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        gap: rem(16);
+
+        @media (max-width:$mobile) {
+            gap: rem(8);
+        }
+    }
+
+    // .contact-form__label
+
+    &__label {
+        color: $blackColor;
+        line-height: 180%;
+
+        @media (max-width:$mobile) {
+            font-size: rem(16);
+        }
+    }
+
+    // .contact-form__input
+
+    &__input {
+        padding: rem(24) rem(32);
+        background-color: #F7F9FD;
+        border-radius: rem(15);
+        border: rem(1) solid #DFE8FA;
+
+        @media (max-width:$mobile) {
+            font-size: rem(14);
+            padding: rem(12) rem(16);
+        }
+    }
+}
+
+//Footer====================================================================================================
+
+.footer {
+    position: relative;
+    background: #3B434F;
+    @include adaptiveValue("padding-top", 500, 270);
+    @include adaptiveValue("padding-bottom", 80, 20);
+    color: #fff;
+
+    // .footer__top
+
+    &__top {
+        display: flex;
+        @include adaptiveValue("gap", 40, 25);
+        justify-content: space-between;
+
+        &:not(:last-child) {
+            @include adaptiveValue("margin-bottom", 80, 25);
+        }
+
+        @media (max-width:$mobile) {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+    // .footer__bottom-text
+
+    &__bottom-text {
+        text-align: center;
+        opacity: 0.5;
+        line-height: 150%;
+
+        a {
+            transition: color 0.3s ease 0s;
+
+            @media (any-hover: hover) {
+                &:hover {
+                    color: $darkPinkColor;
+                }
+            }
+        }
+
+        @media (max-width:$mobile) {
+            font-size: rem(14);
+        }
+    }
+}
+
+.footer-socials {
+    display: flex;
+    align-items: center;
+    gap: rem(30);
+
+    // .footer-socials__item
+
+    &__item {
+        width: rem(30);
+        height: rem(30);
+    }
+
+    // .footer-socials__img
+
+    &__img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        fill: #fff;
+        transition: fill 0.3s ease 0s;
+
+        @media (any-hover: hover) {
+            &:hover {
+                fill: $pinkColor;
+            }
+        }
+    }
+}
+
+.footer-links {
+    display: flex;
+    @include adaptiveValue("gap", 100, 20);
+
+    @media (max-width:$mobileSmall) {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        gap: rem(30);
+    }
+
+    // .footer-links__item
+
+    &__item {
+        &:not(:last-child) {
+            @include adaptiveValue("margin-bottom", 32, 12);
+        }
+    }
+
+    // .footer-links__link
+
+    &__link {
+        transition: color 0.3s ease 0s;
+
+        @media (any-hover: hover) {
+            &:hover {
+                color: $pinkColor;
+            }
+        }
+
+        @media (max-width:$mobile) {
+            font-size: rem(16);
+        }
+    }
+}
+
+//====================================================================================================
