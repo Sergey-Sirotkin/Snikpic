@@ -74,8 +74,8 @@ body {
 	flex-direction: column;
 	overflow: hidden;
 	.menu-open & {
-		height: 100vh; 
-		position: relative;
+		overflow: hidden;
+		height: 100%;
 	}
 	// Прижимаем footer
 	> main {

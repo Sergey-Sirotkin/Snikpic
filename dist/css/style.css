@@ -100,8 +100,8 @@ h6 {
 }
 
 .menu-open .wrapper {
-  height: 100vh;
-  position: relative;
+  overflow: hidden;
+  height: 100%;
 }
 
 .wrapper > main {
