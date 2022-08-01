@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20220727202856">
+	<link rel="stylesheet" href="css/style.min.css?_v=20220801180857">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -72,7 +72,7 @@
 					<div class="product__body">
 						<h1 class="product__title">your agency.<span>in a box.</span></h1>
 						<p class="product__text subtitle-text">All of your work in one place. And much more</p>
-						<form class="product-form" action="#">
+						<form data-popup-message="#form-message" data-dev class="product-form" action="#">
 							<input required type="email" name="form[]" placeholder="Enter your email address" class="product-form__input">
 							<div class="product-form__body">
 								<button class="product-form__button btn">Sign up</button>
@@ -353,7 +353,7 @@
 			<section class="contact">
 				<div class="contact__container">
 					<h2 class="contact__title title">apply to our <span>closed beta.</span></h2>
-					<form action="#" class="contact-form">
+					<form data-popup-message="#form-message" data-dev action="#" class="contact-form">
 						<div class="contact-form__body">
 							<div class="contact-form__item">
 								<label class="contact-form__label" for="username">Name</label>
@@ -464,7 +464,17 @@
 			</div>
 		</footer>
 	</div>
-	<script src="js/app.min.js?_v=20220727202856"></script>
+	<div id="form-message" aria-hidden="true" class="popup">
+		<div class="popup__wrapper">
+			<div class="popup__content">
+				<div class="popup__text">
+					Thanks, your submit is in progress!
+				</div>
+				<button data-close type="button" class="popup__close btn">Close</button>
+			</div>
+		</div>
+	</div>
+	<script src="js/app.min.js?_v=20220801180857"></script>
 </body>
 
 </html>
