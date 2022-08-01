@@ -99,6 +99,11 @@ h6 {
   overflow: hidden;
 }
 
+.menu-open .wrapper {
+  height: 100vh;
+  position: relative;
+}
+
 .wrapper > main {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 auto;
