@@ -83,6 +83,10 @@ h6 {
       touch-action: none;
 }
 
+.menu-open body {
+  overflow: hidden;
+}
+
 .wrapper {
   min-height: 100%;
   display: -webkit-box;
